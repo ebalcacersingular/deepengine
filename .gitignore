@@ -1,0 +1,117 @@
+# Flutter related files
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+.flutter-versions
+
+# VS Code related files
+.vscode/
+*.code-workspace
+
+# Byte-compiled / optimized / DLL files
+*.dll
+*.dylib
+*.exe
+*.o
+*.so
+
+# Packages
+*.package
+
+# Miscellaneous
+*.class
+*.lock
+*.log
+*.pyc
+*.pyo
+*.ser
+*.swp
+*.DS_Store
+*.keystore
+*.iml
+
+# Android specific files
+android/.gradle/
+android/app/build/
+android/local.properties
+android/.idea/
+android/captures/
+
+# iOS specific files
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Runner.xcworkspace/
+ios/Pods/
+ios/Runner/GeneratedPluginRegistrant.*
+
+# Web related files
+web/.dart_tool/
+web/flutter.css
+web/.flutter-plugins
+web/.flutter-plugins-dependencies
+web/flutter_service_worker.js
+web/index.html
+web/main.dart.js
+
+# Linux related files
+linux/flutter/ephemeral/
+
+# macOS related files
+macos/Flutter/ephemeral/
+
+# Windows related files
+windows/flutter/ephemeral/
+
+# IDE files
+.idea/
+*.iml
+
+# JetBrains IDEs
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Xcode
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+*.xcworkspace
+!default.xcworkspace
+*.xcconfig
+
+# CocoaPods
+Pods/
+Podfile.lock
+# Keep Podfile for projects which have manually edited the file
+# Podfile
+
+# Generated files
+flutter_export_environment.sh
+flutter_export_environment.bat
+
+# Symbolicator Crash Logs
+*.dSYM.zip
+*.dSYM
+
+# Obsolete patterns
+# Uncomment to remove obsolete patterns
+# *.orig
+# .deps
