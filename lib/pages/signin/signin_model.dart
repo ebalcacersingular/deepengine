@@ -6,29 +6,29 @@ class SigninModel extends FlutterFlowModel<SigninWidget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
-  // State field(s) for first_last_name widget.
-  FocusNode? firstLastNameFocusNode1;
-  TextEditingController? firstLastNameTextController1;
-  String? Function(BuildContext, String?)?
-      firstLastNameTextController1Validator;
-  // State field(s) for first_last_name widget.
-  FocusNode? firstLastNameFocusNode2;
-  TextEditingController? firstLastNameTextController2;
-  late bool firstLastNameVisibility;
-  String? Function(BuildContext, String?)?
-      firstLastNameTextController2Validator;
+  // State field(s) for email widget.
+  FocusNode? emailFocusNode;
+  TextEditingController? emailTextController;
+  String? Function(BuildContext, String?)? emailTextControllerValidator;
+  // State field(s) for password widget.
+  FocusNode? passwordFocusNode;
+  TextEditingController? passwordTextController;
+  late bool passwordVisibility;
+  String? Function(BuildContext, String?)? passwordTextControllerValidator;
+  // Stores action output result for [Custom Action - passKeyLogin] action in Button widget.
+  String? loginResults;
 
   @override
   void initState(BuildContext context) {
-    firstLastNameVisibility = false;
+    passwordVisibility = false;
   }
 
   @override
   void dispose() {
-    firstLastNameFocusNode1?.dispose();
-    firstLastNameTextController1?.dispose();
+    emailFocusNode?.dispose();
+    emailTextController?.dispose();
 
-    firstLastNameFocusNode2?.dispose();
-    firstLastNameTextController2?.dispose();
+    passwordFocusNode?.dispose();
+    passwordTextController?.dispose();
   }
 }

@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'signup_main_model.dart';
 export 'signup_main_model.dart';
@@ -22,20 +23,20 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
     super.initState();
     _model = createModel(context, () => SignupMainModel());
 
-    _model.firstLastNameTextController1 ??= TextEditingController();
-    _model.firstLastNameFocusNode1 ??= FocusNode();
+    _model.firstLastNameTextController ??= TextEditingController();
+    _model.firstLastNameFocusNode ??= FocusNode();
 
-    _model.firstLastNameTextController2 ??= TextEditingController();
-    _model.firstLastNameFocusNode2 ??= FocusNode();
+    _model.emailTextController ??= TextEditingController();
+    _model.emailFocusNode ??= FocusNode();
 
-    _model.firstLastNameTextController3 ??= TextEditingController();
-    _model.firstLastNameFocusNode3 ??= FocusNode();
+    _model.teamNameTextController ??= TextEditingController();
+    _model.teamNameFocusNode ??= FocusNode();
 
-    _model.firstLastNameTextController4 ??= TextEditingController();
-    _model.firstLastNameFocusNode4 ??= FocusNode();
+    _model.passwordTextController ??= TextEditingController();
+    _model.passwordFocusNode ??= FocusNode();
 
-    _model.firstLastNameTextController5 ??= TextEditingController();
-    _model.firstLastNameFocusNode5 ??= FocusNode();
+    _model.confirmPasswordTextController ??= TextEditingController();
+    _model.confirmPasswordFocusNode ??= FocusNode();
   }
 
   @override
@@ -247,9 +248,9 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                     children: [
                                                       TextFormField(
                                                         controller: _model
-                                                            .firstLastNameTextController1,
+                                                            .firstLastNameTextController,
                                                         focusNode: _model
-                                                            .firstLastNameFocusNode1,
+                                                            .firstLastNameFocusNode,
                                                         autofocus: true,
                                                         obscureText: false,
                                                         decoration:
@@ -353,15 +354,15 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                       0.0,
                                                                 ),
                                                         validator: _model
-                                                            .firstLastNameTextController1Validator
+                                                            .firstLastNameTextControllerValidator
                                                             .asValidator(
                                                                 context),
                                                       ),
                                                       TextFormField(
                                                         controller: _model
-                                                            .firstLastNameTextController2,
+                                                            .emailTextController,
                                                         focusNode: _model
-                                                            .firstLastNameFocusNode2,
+                                                            .emailFocusNode,
                                                         autofocus: true,
                                                         obscureText: false,
                                                         decoration:
@@ -465,15 +466,15 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                       0.0,
                                                                 ),
                                                         validator: _model
-                                                            .firstLastNameTextController2Validator
+                                                            .emailTextControllerValidator
                                                             .asValidator(
                                                                 context),
                                                       ),
                                                       TextFormField(
                                                         controller: _model
-                                                            .firstLastNameTextController3,
+                                                            .teamNameTextController,
                                                         focusNode: _model
-                                                            .firstLastNameFocusNode3,
+                                                            .teamNameFocusNode,
                                                         autofocus: true,
                                                         obscureText: false,
                                                         decoration:
@@ -577,18 +578,18 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                       0.0,
                                                                 ),
                                                         validator: _model
-                                                            .firstLastNameTextController3Validator
+                                                            .teamNameTextControllerValidator
                                                             .asValidator(
                                                                 context),
                                                       ),
                                                       TextFormField(
                                                         controller: _model
-                                                            .firstLastNameTextController4,
+                                                            .passwordTextController,
                                                         focusNode: _model
-                                                            .firstLastNameFocusNode4,
+                                                            .passwordFocusNode,
                                                         autofocus: true,
                                                         obscureText: !_model
-                                                            .firstLastNameVisibility1,
+                                                            .passwordVisibility,
                                                         decoration:
                                                             InputDecoration(
                                                           labelText:
@@ -679,15 +680,15 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                             onTap: () =>
                                                                 setState(
                                                               () => _model
-                                                                      .firstLastNameVisibility1 =
+                                                                      .passwordVisibility =
                                                                   !_model
-                                                                      .firstLastNameVisibility1,
+                                                                      .passwordVisibility,
                                                             ),
                                                             focusNode: FocusNode(
                                                                 skipTraversal:
                                                                     true),
                                                             child: Icon(
-                                                              _model.firstLastNameVisibility1
+                                                              _model.passwordVisibility
                                                                   ? Icons
                                                                       .visibility_outlined
                                                                   : Icons
@@ -713,18 +714,18 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                       0.0,
                                                                 ),
                                                         validator: _model
-                                                            .firstLastNameTextController4Validator
+                                                            .passwordTextControllerValidator
                                                             .asValidator(
                                                                 context),
                                                       ),
                                                       TextFormField(
                                                         controller: _model
-                                                            .firstLastNameTextController5,
+                                                            .confirmPasswordTextController,
                                                         focusNode: _model
-                                                            .firstLastNameFocusNode5,
+                                                            .confirmPasswordFocusNode,
                                                         autofocus: true,
                                                         obscureText: !_model
-                                                            .firstLastNameVisibility2,
+                                                            .confirmPasswordVisibility,
                                                         decoration:
                                                             InputDecoration(
                                                           labelText:
@@ -815,15 +816,15 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                             onTap: () =>
                                                                 setState(
                                                               () => _model
-                                                                      .firstLastNameVisibility2 =
+                                                                      .confirmPasswordVisibility =
                                                                   !_model
-                                                                      .firstLastNameVisibility2,
+                                                                      .confirmPasswordVisibility,
                                                             ),
                                                             focusNode: FocusNode(
                                                                 skipTraversal:
                                                                     true),
                                                             child: Icon(
-                                                              _model.firstLastNameVisibility2
+                                                              _model.confirmPasswordVisibility
                                                                   ? Icons
                                                                       .visibility_outlined
                                                                   : Icons
@@ -849,7 +850,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                       0.0,
                                                                 ),
                                                         validator: _model
-                                                            .firstLastNameTextController5Validator
+                                                            .confirmPasswordTextControllerValidator
                                                             .asValidator(
                                                                 context),
                                                       ),
@@ -1001,9 +1002,37 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                         ),
                                                       ),
                                                       FFButtonWidget(
-                                                        onPressed: () {
-                                                          print(
-                                                              'Button pressed ...');
+                                                        onPressed: () async {
+                                                          _model.registerResults =
+                                                              await actions
+                                                                  .passKeyLogin(
+                                                            _model
+                                                                .emailTextController
+                                                                .text,
+                                                          );
+                                                          await showDialog(
+                                                            context: context,
+                                                            builder:
+                                                                (alertDialogContext) {
+                                                              return AlertDialog(
+                                                                title: const Text(
+                                                                    'Info'),
+                                                                content: Text(_model
+                                                                    .registerResults!),
+                                                                actions: [
+                                                                  TextButton(
+                                                                    onPressed: () =>
+                                                                        Navigator.pop(
+                                                                            alertDialogContext),
+                                                                    child: const Text(
+                                                                        'Ok'),
+                                                                  ),
+                                                                ],
+                                                              );
+                                                            },
+                                                          );
+
+                                                          setState(() {});
                                                         },
                                                         text:
                                                             'Sign up using Passkey',

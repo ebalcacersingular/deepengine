@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'signin_model.dart';
 export 'signin_model.dart';
@@ -22,11 +23,11 @@ class _SigninWidgetState extends State<SigninWidget> {
     super.initState();
     _model = createModel(context, () => SigninModel());
 
-    _model.firstLastNameTextController1 ??= TextEditingController();
-    _model.firstLastNameFocusNode1 ??= FocusNode();
+    _model.emailTextController ??= TextEditingController();
+    _model.emailFocusNode ??= FocusNode();
 
-    _model.firstLastNameTextController2 ??= TextEditingController();
-    _model.firstLastNameFocusNode2 ??= FocusNode();
+    _model.passwordTextController ??= TextEditingController();
+    _model.passwordFocusNode ??= FocusNode();
   }
 
   @override
@@ -290,9 +291,9 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                         children: [
                                                           TextFormField(
                                                             controller: _model
-                                                                .firstLastNameTextController1,
+                                                                .emailTextController,
                                                             focusNode: _model
-                                                                .firstLastNameFocusNode1,
+                                                                .emailFocusNode,
                                                             autofocus: true,
                                                             obscureText: false,
                                                             decoration:
@@ -395,18 +396,18 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                                       0.0,
                                                                 ),
                                                             validator: _model
-                                                                .firstLastNameTextController1Validator
+                                                                .emailTextControllerValidator
                                                                 .asValidator(
                                                                     context),
                                                           ),
                                                           TextFormField(
                                                             controller: _model
-                                                                .firstLastNameTextController2,
+                                                                .passwordTextController,
                                                             focusNode: _model
-                                                                .firstLastNameFocusNode2,
+                                                                .passwordFocusNode,
                                                             autofocus: true,
                                                             obscureText: !_model
-                                                                .firstLastNameVisibility,
+                                                                .passwordVisibility,
                                                             decoration:
                                                                 InputDecoration(
                                                               labelText:
@@ -498,15 +499,15 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                                 onTap: () =>
                                                                     setState(
                                                                   () => _model
-                                                                          .firstLastNameVisibility =
+                                                                          .passwordVisibility =
                                                                       !_model
-                                                                          .firstLastNameVisibility,
+                                                                          .passwordVisibility,
                                                                 ),
                                                                 focusNode: FocusNode(
                                                                     skipTraversal:
                                                                         true),
                                                                 child: Icon(
-                                                                  _model.firstLastNameVisibility
+                                                                  _model.passwordVisibility
                                                                       ? Icons
                                                                           .visibility_outlined
                                                                       : Icons
@@ -531,7 +532,7 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                                       0.0,
                                                                 ),
                                                             validator: _model
-                                                                .firstLastNameTextController2Validator
+                                                                .passwordTextControllerValidator
                                                                 .asValidator(
                                                                     context),
                                                           ),
@@ -619,9 +620,40 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                             ),
                                                           ),
                                                           FFButtonWidget(
-                                                            onPressed: () {
-                                                              print(
-                                                                  'Button pressed ...');
+                                                            onPressed:
+                                                                () async {
+                                                              _model.loginResults =
+                                                                  await actions
+                                                                      .passKeyLogin(
+                                                                _model
+                                                                    .emailTextController
+                                                                    .text,
+                                                              );
+                                                              await showDialog(
+                                                                context:
+                                                                    context,
+                                                                builder:
+                                                                    (alertDialogContext) {
+                                                                  return AlertDialog(
+                                                                    title: const Text(
+                                                                        'Info'),
+                                                                    content: Text(
+                                                                        _model
+                                                                            .loginResults!),
+                                                                    actions: [
+                                                                      TextButton(
+                                                                        onPressed:
+                                                                            () =>
+                                                                                Navigator.pop(alertDialogContext),
+                                                                        child: const Text(
+                                                                            'Ok'),
+                                                                      ),
+                                                                    ],
+                                                                  );
+                                                                },
+                                                              );
+
+                                                              setState(() {});
                                                             },
                                                             text:
                                                                 'Sign in using Passkey',

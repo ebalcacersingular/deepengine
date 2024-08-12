@@ -7,56 +7,54 @@ class SignupMainModel extends FlutterFlowModel<SignupMainWidget> {
 
   final formKey = GlobalKey<FormState>();
   // State field(s) for first_last_name widget.
-  FocusNode? firstLastNameFocusNode1;
-  TextEditingController? firstLastNameTextController1;
+  FocusNode? firstLastNameFocusNode;
+  TextEditingController? firstLastNameTextController;
+  String? Function(BuildContext, String?)? firstLastNameTextControllerValidator;
+  // State field(s) for email widget.
+  FocusNode? emailFocusNode;
+  TextEditingController? emailTextController;
+  String? Function(BuildContext, String?)? emailTextControllerValidator;
+  // State field(s) for team_name widget.
+  FocusNode? teamNameFocusNode;
+  TextEditingController? teamNameTextController;
+  String? Function(BuildContext, String?)? teamNameTextControllerValidator;
+  // State field(s) for password widget.
+  FocusNode? passwordFocusNode;
+  TextEditingController? passwordTextController;
+  late bool passwordVisibility;
+  String? Function(BuildContext, String?)? passwordTextControllerValidator;
+  // State field(s) for confirm_password widget.
+  FocusNode? confirmPasswordFocusNode;
+  TextEditingController? confirmPasswordTextController;
+  late bool confirmPasswordVisibility;
   String? Function(BuildContext, String?)?
-      firstLastNameTextController1Validator;
-  // State field(s) for first_last_name widget.
-  FocusNode? firstLastNameFocusNode2;
-  TextEditingController? firstLastNameTextController2;
-  String? Function(BuildContext, String?)?
-      firstLastNameTextController2Validator;
-  // State field(s) for first_last_name widget.
-  FocusNode? firstLastNameFocusNode3;
-  TextEditingController? firstLastNameTextController3;
-  String? Function(BuildContext, String?)?
-      firstLastNameTextController3Validator;
-  // State field(s) for first_last_name widget.
-  FocusNode? firstLastNameFocusNode4;
-  TextEditingController? firstLastNameTextController4;
-  late bool firstLastNameVisibility1;
-  String? Function(BuildContext, String?)?
-      firstLastNameTextController4Validator;
-  // State field(s) for first_last_name widget.
-  FocusNode? firstLastNameFocusNode5;
-  TextEditingController? firstLastNameTextController5;
-  late bool firstLastNameVisibility2;
-  String? Function(BuildContext, String?)?
-      firstLastNameTextController5Validator;
+      confirmPasswordTextControllerValidator;
   // State field(s) for Checkbox widget.
   bool? checkboxValue;
+  // Stores action output result for [Custom Action - passKeyLogin] action in Button widget.
+  String? registerResults;
 
   @override
   void initState(BuildContext context) {
-    firstLastNameVisibility1 = false;
-    firstLastNameVisibility2 = false;
+    passwordVisibility = false;
+    confirmPasswordVisibility = false;
   }
 
   @override
   void dispose() {
-    firstLastNameFocusNode1?.dispose();
-    firstLastNameTextController1?.dispose();
+    firstLastNameFocusNode?.dispose();
+    firstLastNameTextController?.dispose();
 
-    firstLastNameFocusNode2?.dispose();
-    firstLastNameTextController2?.dispose();
+    emailFocusNode?.dispose();
+    emailTextController?.dispose();
 
-    firstLastNameFocusNode3?.dispose();
-    firstLastNameTextController3?.dispose();
+    teamNameFocusNode?.dispose();
+    teamNameTextController?.dispose();
 
-    firstLastNameFocusNode4?.dispose();
-    firstLastNameTextController4?.dispose();
+    passwordFocusNode?.dispose();
+    passwordTextController?.dispose();
 
-    firstLastNameFocusNode5?.dispose();
-    firstLastNameTextController5?.dispose();
+    confirmPasswordFocusNode?.dispose();
+    confirmPasswordTextController?.dispose();
   }
 }
