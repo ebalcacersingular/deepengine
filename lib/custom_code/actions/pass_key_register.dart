@@ -9,8 +9,9 @@ import 'package:flutter/material.dart';
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:corbado_auth/corbado_auth.dart';
+import 'package:deepengine/app_state.dart';
 
-Future<String> passKeyRegister(String email) async {
+Future<String?> passKeyRegister(String email) async {
   // Add your function code here!
   try {
     final corbadoAuth = FFAppState().corbado['instance'] as CorbadoAuth;

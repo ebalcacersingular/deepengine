@@ -115,3 +115,5 @@ flutter_export_environment.bat
 # Uncomment to remove obsolete patterns
 # *.orig
 # .deps
+
+*.env
