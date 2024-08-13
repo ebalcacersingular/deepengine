@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'signin_model.dart';
 export 'signin_model.dart';
@@ -628,9 +629,45 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                               ),
                                                             ),
                                                             FFButtonWidget(
-                                                              onPressed: () {
-                                                                print(
-                                                                    'Button pressed ...');
+                                                              onPressed:
+                                                                  () async {
+                                                                _model.signinResults =
+                                                                    await actions
+                                                                        .passKeyLogin(
+                                                                  _model
+                                                                      .emailTextController
+                                                                      .text,
+                                                                );
+                                                                if (_model
+                                                                        .signinResults ==
+                                                                    'ok') {
+                                                                  context.pushNamed(
+                                                                      'Dsahboard');
+                                                                } else {
+                                                                  ScaffoldMessenger.of(
+                                                                          context)
+                                                                      .showSnackBar(
+                                                                    SnackBar(
+                                                                      content:
+                                                                          Text(
+                                                                        'Error',
+                                                                        style:
+                                                                            TextStyle(
+                                                                          color:
+                                                                              FlutterFlowTheme.of(context).primaryText,
+                                                                        ),
+                                                                      ),
+                                                                      duration: const Duration(
+                                                                          milliseconds:
+                                                                              4000),
+                                                                      backgroundColor:
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .secondary,
+                                                                    ),
+                                                                  );
+                                                                }
+
+                                                                setState(() {});
                                                               },
                                                               text:
                                                                   'Sign in using Passkey',

@@ -10,16 +10,19 @@ import 'package:flutter/material.dart';
 
 import 'package:corbado_auth/corbado_auth.dart';
 
-Future<String?> passKeyRegister(String email) async {
+Future<String?> passKeyLogin(String email) async {
   try {
     final corbadoAuth = FFAppState().corbado['instance'] as CorbadoAuth;
-    await corbadoAuth.signUpWithPasskey(email: email, fullName: email);
+    await corbadoAuth.loginWithPasskey(email: email);
     FFAppState().corbado['instance'] = corbadoAuth;
     return 'ok';
   } on PasskeyAuthCancelledException {
     return null;
-  } on NoPasskeyForDeviceException {
-    return 'No passkey has been setup on this device for ${email}.';
+  } on ValidationException catch (e) {
+    return 'validation error: ${e.toString()}';
+  } on UnexpectedBackendException catch (e) {
+    debugPrint(e.toString());
+    return 'An unexpected error happened during registration. Please try again later.';
   } on UnknownUserException {
     return 'Incorrect user identifier. Please check your email.';
   } catch (e) {
