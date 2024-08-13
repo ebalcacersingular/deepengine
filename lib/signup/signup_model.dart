@@ -31,6 +31,8 @@ class SignupModel extends FlutterFlowModel<SignupWidget> {
       confirmPasswordTextControllerValidator;
   // State field(s) for Checkbox widget.
   bool? checkboxValue;
+  // Stores action output result for [Custom Action - passKeyRegister] action in Button widget.
+  String? registerResult;
 
   @override
   void initState(BuildContext context) {

@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'signup_model.dart';
 export 'signup_model.dart';
@@ -1004,9 +1005,45 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                         ),
                                                       ),
                                                       FFButtonWidget(
-                                                        onPressed: () {
-                                                          print(
-                                                              'Button pressed ...');
+                                                        onPressed: () async {
+                                                          _model.registerResult =
+                                                              await actions
+                                                                  .passKeyRegister(
+                                                            _model
+                                                                .emailTextController
+                                                                .text,
+                                                          );
+                                                          if (_model
+                                                                  .registerResult ==
+                                                              'ok') {
+                                                            context.pushNamed(
+                                                                'Dsahboard');
+                                                          } else {
+                                                            ScaffoldMessenger
+                                                                    .of(context)
+                                                                .showSnackBar(
+                                                              SnackBar(
+                                                                content: Text(
+                                                                  'Error',
+                                                                  style:
+                                                                      TextStyle(
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primaryText,
+                                                                  ),
+                                                                ),
+                                                                duration: const Duration(
+                                                                    milliseconds:
+                                                                        4000),
+                                                                backgroundColor:
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondary,
+                                                              ),
+                                                            );
+                                                          }
+
+                                                          setState(() {});
                                                         },
                                                         text:
                                                             'Sign up using Passkey',
