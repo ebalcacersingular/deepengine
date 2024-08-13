@@ -15,8 +15,6 @@ class SigninModel extends FlutterFlowModel<SigninWidget> {
   TextEditingController? passwordTextController;
   late bool passwordVisibility;
   String? Function(BuildContext, String?)? passwordTextControllerValidator;
-  // Stores action output result for [Custom Action - passKeyLogin] action in Button widget.
-  String? loginResults;
 
   @override
   void initState(BuildContext context) {

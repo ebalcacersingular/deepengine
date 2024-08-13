@@ -1,27 +1,26 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'signup_main_model.dart';
-export 'signup_main_model.dart';
+import 'signup_model.dart';
+export 'signup_model.dart';
 
-class SignupMainWidget extends StatefulWidget {
-  const SignupMainWidget({super.key});
+class SignupWidget extends StatefulWidget {
+  const SignupWidget({super.key});
 
   @override
-  State<SignupMainWidget> createState() => _SignupMainWidgetState();
+  State<SignupWidget> createState() => _SignupWidgetState();
 }
 
-class _SignupMainWidgetState extends State<SignupMainWidget> {
-  late SignupMainModel _model;
+class _SignupWidgetState extends State<SignupWidget> {
+  late SignupModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SignupMainModel());
+    _model = createModel(context, () => SignupModel());
 
     _model.firstLastNameTextController ??= TextEditingController();
     _model.firstLastNameFocusNode ??= FocusNode();
@@ -169,7 +168,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                           context)
                                                       .displaySmall
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily: 'Outfit',
                                                         color: Colors.white,
                                                         letterSpacing: 0.0,
                                                       ),
@@ -180,7 +179,8 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -204,7 +204,8 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                           context)
                                                       .bodyLarge
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color: Colors.white,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -217,7 +218,8 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily:
+                                                            'Readex Pro',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -263,7 +265,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -275,7 +277,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -346,7 +348,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Inter',
+                                                                      'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
@@ -375,7 +377,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -387,7 +389,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -458,7 +460,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Inter',
+                                                                      'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
@@ -487,7 +489,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -499,7 +501,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -570,7 +572,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Inter',
+                                                                      'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
@@ -600,7 +602,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -612,7 +614,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -706,7 +708,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Inter',
+                                                                      'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
@@ -736,7 +738,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -748,7 +750,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .labelMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: const Color(
                                                                         0xFF868686),
                                                                     letterSpacing:
@@ -842,7 +844,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Inter',
+                                                                      'Readex Pro',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .secondaryText,
@@ -918,7 +920,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Inter',
+                                                                      'Readex Pro',
                                                                   color: const Color(
                                                                       0xFFCECECE),
                                                                   letterSpacing:
@@ -933,7 +935,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Inter',
+                                                                      'Readex Pro',
                                                                   color: const Color(
                                                                       0xFF5976DE),
                                                                   letterSpacing:
@@ -948,9 +950,9 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                         MainAxisSize.max,
                                                     children: [
                                                       FFButtonWidget(
-                                                        onPressed: () async {
-                                                          context.pushNamed(
-                                                              'Dasboard');
+                                                        onPressed: () {
+                                                          print(
+                                                              'Button pressed ...');
                                                         },
                                                         text: 'Sign up',
                                                         options:
@@ -981,7 +983,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: Colors
                                                                         .white,
                                                                     fontSize:
@@ -1002,37 +1004,9 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                         ),
                                                       ),
                                                       FFButtonWidget(
-                                                        onPressed: () async {
-                                                          _model.registerResults =
-                                                              await actions
-                                                                  .passKeyLogin(
-                                                            _model
-                                                                .emailTextController
-                                                                .text,
-                                                          );
-                                                          await showDialog(
-                                                            context: context,
-                                                            builder:
-                                                                (alertDialogContext) {
-                                                              return AlertDialog(
-                                                                title: const Text(
-                                                                    'Info'),
-                                                                content: Text(_model
-                                                                    .registerResults!),
-                                                                actions: [
-                                                                  TextButton(
-                                                                    onPressed: () =>
-                                                                        Navigator.pop(
-                                                                            alertDialogContext),
-                                                                    child: const Text(
-                                                                        'Ok'),
-                                                                  ),
-                                                                ],
-                                                              );
-                                                            },
-                                                          );
-
-                                                          setState(() {});
+                                                        onPressed: () {
+                                                          print(
+                                                              'Button pressed ...');
                                                         },
                                                         text:
                                                             'Sign up using Passkey',
@@ -1063,7 +1037,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Readex Pro',
                                                                     color: Colors
                                                                         .white,
                                                                     fontSize:
@@ -1105,40 +1079,26 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Inter',
+                                                                    'Readex Pro',
                                                                 color: const Color(
                                                                     0xFF868686),
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
                                                         ),
-                                                        InkWell(
-                                                          splashColor: Colors
-                                                              .transparent,
-                                                          focusColor: Colors
-                                                              .transparent,
-                                                          hoverColor: Colors
-                                                              .transparent,
-                                                          highlightColor: Colors
-                                                              .transparent,
-                                                          onTap: () async {
-                                                            context.pushNamed(
-                                                                'signin');
-                                                          },
-                                                          child: Text(
-                                                            'Sign in',
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Inter',
-                                                                  color: const Color(
-                                                                      0xFF5976DE),
-                                                                  letterSpacing:
-                                                                      0.0,
-                                                                ),
-                                                          ),
+                                                        Text(
+                                                          'Sign in',
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: const Color(
+                                                                    0xFF5976DE),
+                                                                letterSpacing:
+                                                                    0.0,
+                                                              ),
                                                         ),
                                                       ].divide(
                                                           const SizedBox(width: 4.0)),
@@ -1236,7 +1196,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                   .displaySmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'Outfit',
                                                                     color: const Color(
                                                                         0xFFF7F7F7),
                                                                     letterSpacing:
@@ -1268,7 +1228,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
-                                                                              fontFamily: 'Inter',
+                                                                              fontFamily: 'Readex Pro',
                                                                               color: const Color(0xFF868686),
                                                                               letterSpacing: 0.0,
                                                                             ),
@@ -1298,7 +1258,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
-                                                                              fontFamily: 'Inter',
+                                                                              fontFamily: 'Readex Pro',
                                                                               color: const Color(0xFF868686),
                                                                               letterSpacing: 0.0,
                                                                             ),
@@ -1328,7 +1288,7 @@ class _SignupMainWidgetState extends State<SignupMainWidget> {
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
-                                                                              fontFamily: 'Inter',
+                                                                              fontFamily: 'Readex Pro',
                                                                               color: const Color(0xFF868686),
                                                                               letterSpacing: 0.0,
                                                                             ),

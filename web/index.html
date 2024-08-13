@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -9,19 +8,20 @@
     The path provided below has to start and end with a slash "/" in order for
     it to work correctly.
 
-    For more details:
+    Fore more details:
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
   -->
   <base href="/">
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <script src="https://github.com/corbado/flutter-passkeys/releases/download/2.0.0-dev.1/bundle.js"
-    type="application/javascript"></script>
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Deepengine">
+  <meta name="apple-mobile-web-app-title" content="Deep Engine">
+
+  
 
   <meta name="robots" content="noindex" />
 
@@ -29,42 +29,47 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <!-- Open Graph & SEO tags -->
-  <meta property="og:title" content="Deepengine" />
+  <meta property="og:title" content="Deep Engine" />
   <meta property="og:description" content="Built with FlutterFlow." />
-  <meta property="og:image" content="https://storage.googleapis.com/flutterflow-prod-hosting/og_splash_gradient.png" />
-  <meta name="twitter:title" content="Deepengine" />
+  <meta property="og:image" content="https://storage.googleapis.com/flutterflow-prod-hosting/og_splash_gradient.png" /> 
+  <meta name="twitter:title" content="Deep Engine" />
   <meta name="twitter:description" content="Built with FlutterFlow." />
   <meta name="twitter:image" content="https://storage.googleapis.com/flutterflow-prod-hosting/og_splash_gradient.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <title>Deepengine</title>
+  <title> Deep Engine </title>
   <meta name="description" content="Built with FlutterFlow." />
+    
 
   <!-- Status Bar color in Safari browser (iOS) and PWA -->
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f1f4f8">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1d2428">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#1d2428">
 
   <link rel="manifest" href="manifest.json">
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "{{flutter_service_worker_version}}";
+    var serviceWorkerVersion = null;
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  
 </head>
-
 <body>
+  
+  
+  
+  
   
   <script>
     window.addEventListener('load', function (ev) {
       // Download main.dart.js
-      _flutter.loader.load({
+      _flutter.loader.loadEntrypoint({
         entrypointUrl: 'main.dart.js',
         serviceWorker: {
           serviceWorkerUrl: 'flutter_service_worker.js?v=',
           serviceWorkerVersion: serviceWorkerVersion,
         },
-        onEntrypointLoaded: async function (engineInitializer) {
+        onEntrypointLoaded: async function(engineInitializer) {
           // Initialize the Flutter engine
           let appRunner = await engineInitializer.initializeEngine({});
           // Run the app
@@ -74,5 +79,4 @@
     });
   </script>
 </body>
-
 </html>

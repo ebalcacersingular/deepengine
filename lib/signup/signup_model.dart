@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'signup_main_widget.dart' show SignupMainWidget;
+import 'signup_widget.dart' show SignupWidget;
 import 'package:flutter/material.dart';
 
-class SignupMainModel extends FlutterFlowModel<SignupMainWidget> {
+class SignupModel extends FlutterFlowModel<SignupWidget> {
   ///  State fields for stateful widgets in this page.
 
   final formKey = GlobalKey<FormState>();
@@ -31,8 +31,6 @@ class SignupMainModel extends FlutterFlowModel<SignupMainWidget> {
       confirmPasswordTextControllerValidator;
   // State field(s) for Checkbox widget.
   bool? checkboxValue;
-  // Stores action output result for [Custom Action - passKeyLogin] action in Button widget.
-  String? registerResults;
 
   @override
   void initState(BuildContext context) {

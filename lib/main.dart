@@ -1,8 +1,3 @@
-import 'package:deepengine/app_state.dart';
-import 'package:provider/provider.dart';
-
-import '/custom_code/actions/index.dart' as actions;
-
 import 'package:flutter/material.dart';
 
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -10,26 +5,15 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/nav/nav.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
-  await dotenv.load(); // Load the environment variables
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
 
   await FlutterFlowTheme.initialize();
-  final appState = FFAppState(); // Initialize FFAppState
-  await appState.initializePersistedState();
 
-  // Start final custom actions code
-  await actions.getCorbadoInstance();
-  // End final custom actions code
-
-  runApp(ChangeNotifierProvider(
-    create: (context) => appState,
-    child: const MyApp(),
-  ));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -65,7 +49,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Deepengine',
+      title: 'Deep Engine',
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
