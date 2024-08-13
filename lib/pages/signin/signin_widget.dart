@@ -712,19 +712,35 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                              Text(
-                                                                'Sign up',
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Readex Pro',
-                                                                      color: const Color(
-                                                                          0xFF5976DE),
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                    ),
+                                                              InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  context.pushNamed(
+                                                                      'signup');
+                                                                },
+                                                                child: Text(
+                                                                  'Sign up',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Readex Pro',
+                                                                        color: const Color(
+                                                                            0xFF5976DE),
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                      ),
+                                                                ),
                                                               ),
                                                             ].divide(const SizedBox(
                                                                 width: 4.0)),
