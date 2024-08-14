@@ -1017,7 +1017,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                   .registerResult ==
                                                               'ok') {
                                                             context.pushNamed(
-                                                                'signin');
+                                                                'Dsahboard');
                                                           } else {
                                                             ScaffoldMessenger
                                                                     .of(context)
