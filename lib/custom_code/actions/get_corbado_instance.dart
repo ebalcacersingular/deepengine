@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:corbado_auth/corbado_auth.dart';
 
 Future<dynamic> getCorbadoInstance() async {
-  final projectId = 'pro-6384106881940724147';
+  final projectId = 'pro-5256718830936629421';
   final corbadoAuth = CorbadoAuth();
   // asegurarse de configurar el campo customDomain para produccion en el .init
   await corbadoAuth.init(projectId);
