@@ -82,9 +82,9 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                 color: Color(0xFF344054),
                                 size: 24.0,
                               ),
-                              Icon(
+                              const Icon(
                                 FFIcons.kbell,
-                                color: const Color(0xFF344054),
+                                color: Color(0xFF344054),
                                 size: 24.0,
                               ),
                               const Icon(
@@ -190,9 +190,9 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                 MainAxisSize
                                                                     .max,
                                                             children: [
-                                                              Icon(
+                                                              const Icon(
                                                                 FFIcons.kicon,
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF667085),
                                                                 size: 24.0,
                                                               ),
@@ -249,10 +249,10 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                 MainAxisSize
                                                                     .max,
                                                             children: [
-                                                              Icon(
+                                                              const Icon(
                                                                 FFIcons
                                                                     .ktargets,
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF667085),
                                                                 size: 24.0,
                                                               ),
@@ -309,9 +309,9 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                 MainAxisSize
                                                                     .max,
                                                             children: [
-                                                              Icon(
+                                                              const Icon(
                                                                 FFIcons.kscans,
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF667085),
                                                                 size: 24.0,
                                                               ),
@@ -368,10 +368,10 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                 MainAxisSize
                                                                     .max,
                                                             children: [
-                                                              Icon(
+                                                              const Icon(
                                                                 FFIcons
                                                                     .kcalendar,
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF667085),
                                                                 size: 24.0,
                                                               ),
@@ -428,10 +428,10 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                 MainAxisSize
                                                                     .max,
                                                             children: [
-                                                              Icon(
+                                                              const Icon(
                                                                 FFIcons
                                                                     .kreports,
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xFF667085),
                                                                 size: 24.0,
                                                               ),
@@ -878,9 +878,9 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                             borderWidth: 0.0,
                                             buttonSize: 40.0,
                                             fillColor: const Color(0xFFF9FAFB),
-                                            icon: Icon(
+                                            icon: const Icon(
                                               FFIcons.kbell,
-                                              color: const Color(0xFF667085),
+                                              color: Color(0xFF667085),
                                               size: 20.0,
                                             ),
                                             onPressed: () {
@@ -3751,8 +3751,8 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                           MainAxisAlignment
                                                                               .spaceBetween,
                                                                       children: [
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        const Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               12.0,
@@ -3761,7 +3761,7 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                               Icon(
                                                                             FFIcons.ksandClock,
                                                                             color:
-                                                                                const Color(0xFF98A2B3),
+                                                                                Color(0xFF98A2B3),
                                                                             size:
                                                                                 24.0,
                                                                           ),
@@ -3832,8 +3832,8 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                           MainAxisAlignment
                                                                               .spaceBetween,
                                                                       children: [
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        const Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               12.0,
@@ -3842,7 +3842,7 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                               Icon(
                                                                             FFIcons.kcalendarCheck,
                                                                             color:
-                                                                                const Color(0xFF98A2B3),
+                                                                                Color(0xFF98A2B3),
                                                                             size:
                                                                                 24.0,
                                                                           ),
@@ -3919,8 +3919,8 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                           MainAxisAlignment
                                                                               .spaceBetween,
                                                                       children: [
-                                                                        Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        const Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               12.0,
@@ -3929,7 +3929,7 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                               Icon(
                                                                             FFIcons.ksandClock,
                                                                             color:
-                                                                                const Color(0xFF98A2B3),
+                                                                                Color(0xFF98A2B3),
                                                                             size:
                                                                                 24.0,
                                                                           ),
@@ -4106,9 +4106,9 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                                         fontWeight: FontWeight.w600,
                                                                                       ),
                                                                                 ),
-                                                                                Icon(
-                                                                                  FFIcons.kexportIcon,
-                                                                                  color: const Color(0xFF475467),
+                                                                                const Icon(
+                                                                                  FFIcons.kexport,
+                                                                                  color: Color(0xFF475467),
                                                                                   size: 18.0,
                                                                                 ),
                                                                               ].divide(const SizedBox(width: 6.0)),
@@ -4204,9 +4204,9 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                                                                         fontWeight: FontWeight.w600,
                                                                                       ),
                                                                                 ),
-                                                                                Icon(
-                                                                                  FFIcons.kexportIcon,
-                                                                                  color: const Color(0xFF475467),
+                                                                                const Icon(
+                                                                                  FFIcons.kexport,
+                                                                                  color: Color(0xFF475467),
                                                                                   size: 18.0,
                                                                                 ),
                                                                               ].divide(const SizedBox(width: 6.0)),
