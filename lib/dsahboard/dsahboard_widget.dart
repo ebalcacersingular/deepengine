@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'dsahboard_model.dart';
@@ -82,10 +83,40 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                 color: Color(0xFF344054),
                                 size: 24.0,
                               ),
-                              const Icon(
-                                FFIcons.kbell,
-                                color: Color(0xFF344054),
-                                size: 24.0,
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  _model.res = await actions.passKeyLogout();
+                                  if (_model.res!) {
+                                    context.pushNamed('signin');
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Error Log Out',
+                                          style: TextStyle(
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryText,
+                                          ),
+                                        ),
+                                        duration: const Duration(milliseconds: 4000),
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .secondary,
+                                      ),
+                                    );
+                                  }
+
+                                  setState(() {});
+                                },
+                                child: const Icon(
+                                  FFIcons.kbell,
+                                  color: Color(0xFF344054),
+                                  size: 24.0,
+                                ),
                               ),
                               const Icon(
                                 Icons.menu,
@@ -883,7 +914,36 @@ class _DsahboardWidgetState extends State<DsahboardWidget> {
                                               color: Color(0xFF667085),
                                               size: 20.0,
                                             ),
-                                            onPressed: () async {},
+                                            onPressed: () async {
+                                              _model.resCopy =
+                                                  await actions.passKeyLogout();
+                                              if (_model.resCopy!) {
+                                                context.pushNamed('signin');
+                                              } else {
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(
+                                                  SnackBar(
+                                                    content: Text(
+                                                      'Error Log Out',
+                                                      style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                      ),
+                                                    ),
+                                                    duration: const Duration(
+                                                        milliseconds: 4000),
+                                                    backgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .secondary,
+                                                  ),
+                                                );
+                                              }
+
+                                              setState(() {});
+                                            },
                                           ),
                                         ],
                                       ),

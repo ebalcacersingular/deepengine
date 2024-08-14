@@ -18,10 +18,14 @@ class DsahboardModel extends FlutterFlowModel<DsahboardWidget> {
 
   ///  State fields for stateful widgets in this page.
 
+  // Stores action output result for [Custom Action - passKeyLogout] action in Icon widget.
+  bool? res;
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // Stores action output result for [Custom Action - passKeyLogout] action in IconButton widget.
+  bool? resCopy;
   // State field(s) for PaginatedDataTable widget.
   final paginatedDataTableController1 =
       FlutterFlowDataTableController<IssueStruct>();
