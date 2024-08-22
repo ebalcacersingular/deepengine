@@ -40,5 +40,8 @@ class DsahboardModel extends FlutterFlowModel<DsahboardWidget> {
   void dispose() {
     textFieldFocusNode?.dispose();
     textController?.dispose();
+
+    paginatedDataTableController1.dispose();
+    paginatedDataTableController2.dispose();
   }
 }
