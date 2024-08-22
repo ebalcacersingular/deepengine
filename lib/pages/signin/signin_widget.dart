@@ -650,7 +650,8 @@ class _SigninWidgetState extends State<SigninWidget> {
                                                                     SnackBar(
                                                                       content:
                                                                           Text(
-                                                                        'Error',
+                                                                        _model
+                                                                            .signinResults!,
                                                                         style:
                                                                             TextStyle(
                                                                           color:

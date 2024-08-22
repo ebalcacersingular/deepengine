@@ -1024,7 +1024,8 @@ class _SignupWidgetState extends State<SignupWidget> {
                                                                 .showSnackBar(
                                                               SnackBar(
                                                                 content: Text(
-                                                                  'Error',
+                                                                  _model
+                                                                      .registerResult!,
                                                                   style:
                                                                       TextStyle(
                                                                     color: FlutterFlowTheme.of(
