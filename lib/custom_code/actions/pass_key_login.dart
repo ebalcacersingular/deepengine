@@ -25,8 +25,10 @@ Future<String?> passKeyLogin(String email) async {
     return 'An unexpected error happened during registration. Please try again later.';
   } on UnknownUserException {
     return 'Incorrect user identifier. Please check your email.';
+  } on NoPasskeyForDeviceException {
+    return 'There is no passkey registered for this device, please register it by logging into your account.';
   } catch (e) {
     print(e);
-    return e.toString();
+    return 'An error ocurred please try again later. ${e}';
   }
 }
